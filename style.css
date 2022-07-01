@@ -1,0 +1,361 @@
+
+body {
+    font-family: 'Finlandica', Courier, monospace;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto 5fr;
+    grid-template-rows: 150px auto;
+
+}
+
+.header {
+    display: grid;
+    grid-column: 2 / -1;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: 0 12px 6px -6px rgb(33, 33, 33);
+    margin-bottom: 7px;
+}
+
+.top-header {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.top-left-header {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column: 1 / 2;
+
+}
+
+/* Main search button styling: https://codepen.io/liamj/pen/vYYLGZj*/
+form {
+    position: relative;
+    width: 30rem;
+    background: #57bd84;
+    border-radius: .7rem;
+}
+
+input, button {
+    /* height: 5rem; */
+    font-family: 'Finlandica', san-serif;
+    border: 0;
+    color: #2f2f2f;
+    font-size: 1.8rem;
+}
+
+input[type='search'] {
+    outline: 0;
+    width: 100%;
+    background: #fff;
+    padding: 0 1.6rem;
+    border-radius: .7rem;
+    appearance: none;
+    transition: all .3s cubic-bezier(0, 0, 0.43, 1.49);
+    transition-property: width, border-radius;
+    z-index: 1;
+    position: relative;
+}
+
+button[type="submit"] {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6rem;
+    font-weight: bold;
+    background: #57bd84;
+    border-radius: 0 .7rem .7rem 0;
+    color: white;
+}
+
+input[type="search"]:not(:placeholder-shown) {
+    border-radius: .7rem 0 0 .7rem;
+    width: calc(100% - 6rem);
+}
+
+button[type="submit"] {
+    display: block;
+    position: absolute;
+    height: 100%;
+}
+
+.searchform > label {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+/* End of button styling. */
+
+.top-right-header {
+    display: grid;
+    grid-column: 3 / -1;
+    grid-template-columns: repeat(4, auto);
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 13px;
+}
+
+.bottom-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.bottom-left-header {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    justify-content: center;
+    align-items: center;
+}
+
+#large-profile-image {
+    height: 3rem;
+    justify-self: end;
+}
+
+.bottom-left-header > p {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    font-weight: bolder;
+}
+
+.bottom-left-header > p > span {
+    font-size: 12px;
+}
+
+.bottom-left-header p::after {
+    content: " (@S.Shin)";
+    letter-spacing: 0.25rem;
+}
+
+.bottom-right-header {
+    display: grid;    
+    grid-template-columns: 1fr 5fr;
+}
+
+.bottom-right-header > .inner {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 1.5vw;
+    grid-column: 2 / 3;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner > button {
+    font-size: 16px;
+    height: 1.7rem;
+    width: 4.5rem;
+    box-shadow: 0 5px 25px 0 #c2fbd7;
+    color: rgb(105, 105, 105);
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 1px solid #adffcb;
+    border-radius: 5px;
+    background-color: #c2fbd7;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;      
+}
+
+.inner > button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+
+
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.dashboard {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-rows: 100px 350px 200px;
+    grid-row: 1 / -1;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(205, 237, 255);
+    color: rgb(105, 105, 105);
+    font-weight: 600;
+    background-color: #c2fbd7;
+    margin-right: 7px;
+    box-shadow: 0 12px 16px 6px rgb(33, 33, 33);
+
+}
+
+.hero,
+.nav > div,
+.user-settings > div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard > .nav {
+    align-self: center;
+}
+
+.dashboard > .user-settings {
+    align-self: center;
+}
+
+
+.hero > img,
+.nav > div > img,
+.user-settings > div > img {
+    border: 3px solid rgb(40, 40, 40);
+    border-radius: 50%;
+    background-color: rgb(240, 240, 240);
+    padding: 4px;
+}
+
+/* Article, Announcement, Trending Section: */
+.main {
+    display: grid;
+    grid-template-columns: auto 300px;
+    gap: 20px;
+    background-color: rgb(235, 235, 235);
+}
+
+.article-section > h3 {
+    display: block;
+    position: absolute;
+    top: 160px;
+}
+
+.article-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    grid-template-rows: repeat(5, auto);
+    padding: 4rem 1.7rem 1.7rem 1.7rem;
+}
+
+.article-section > .article {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    border: 0;
+    box-shadow: inset 7px 7px 10px 1px #c2fbd7, 0 12px 6px -6px rgb(33, 33, 33);
+}
+
+.article > span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.article-icons {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: end;
+    gap: 10px;
+}
+
+.sidebar {
+    display: grid;
+    /* Prevents the sidebar from stretching when expanding or shrinking the webpage. */
+    grid-template-rows: auto auto 1fr;
+    margin-right: 20px;
+}
+
+.sidebar > h3 {
+    position: relative;
+    top: 10px;
+}
+
+.announcements {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 12px 6px -6px rgb(33, 33, 33); */
+    box-shadow: inset 7px 7px 10px 1px #ffe7a7, 0 12px 6px -6px rgb(33, 33, 33);
+}
+
+.announcements > .line-break {
+    border: 1px solid rgb(193, 193, 193);
+    background-color: rgb(193, 193, 193);
+    margin-bottom: 10px;
+}
+
+.announcements > .top > p,
+.announcements > .middle > p,
+.announcements > .bottom > p {
+    max-height: 10ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.announcements > div > span {
+    font-weight: 900;
+}
+
+.trending-topics {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+    display: grid;
+    box-shadow: inset 7px 7px 10px 1px #ffe7a7, 0 12px 6px -6px rgb(33, 33, 33);
+}
+
+.trending-topics > div {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    align-items:center;
+    gap: 15px;
+    padding: 0 10px;
+}
+
+.trending-topics > div > img {
+    background-color: black;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    padding: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
